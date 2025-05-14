@@ -3,10 +3,176 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./stayl.scss" />
+    <title>News Homepage</title>
+    <link rel="stylesheet" href="./css/stayl.min.css" />
   </head>
   <body>
-    <h1>scss</h1>
+    <header class="header container">
+      <div class="header__container">
+        <div class="logo">
+          <img src="./images/W..svg" alt="w logo" width="64.09" height="39.9" />
+        </div>
+        <nav class="sitenav">
+          <ul class="sitenav__list">
+            <li class="sitenav__item">
+              <a class="sitenav__link" id="yelov" href="#">Home</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="#">Works</a>
+            </li>
+
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="#">Blog</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="show-btn" class="header__toggle-btn">
+          <img src="./images/menu.svg" alt="logo" width="30" height="18" />
+        </button>
+      </div>
+      <div class="header__hidden">
+        <nav class="header__hidden__nav">
+          <ul class="sitenav__list">
+            <li class="sitenav__item">
+              <a class="sitenav__link" id="yelov" href="#">Home</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="./pages/work.html">Works</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="./pages/blog.html">Blog</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="./pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container container-ja">
+      <section class="main-content">
+        <img
+          src="./images/vasilis-chatzopoulos.svg"
+          alt="Main Image"
+          width="730"
+          height="300"
+        />
+        <div class="article">
+          <h1>
+            The Bright Future of <br />
+            Web 3.0?
+          </h1>
+          <div>
+            <p>
+              We dive into the next evolution of the web that <br />
+              claims to put the power of the platforms back into the hands of
+              the people. But is it really <br />
+              fulfilling its promise?
+            </p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <h2>New</h2>
+        <ul>
+          <li>
+            <strong>Hydrogen VS Electric Cars</strong>
+            <p>
+              Will hydrogen-fueled cars ever catch up to <br />
+              EVs?
+            </p>
+          </li>
+          <li>
+            <strong>The Downsides of AI Artistry</strong>
+            <p>
+              What are the possible adverse effects of <br />
+              on-demand AI image generation?
+            </p>
+          </li>
+          <li>
+            <strong>Is VC Funding Drying Up?</strong>
+            <p>
+              Private funding by VC firms is down 50% <br />
+              YOY.We take a look at what that means.
+            </p>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="bottom-news">
+        <article>
+          <img
+            src="./images/bitmap.svg"
+            alt="bitmp img"
+            width="100"
+            height="127"
+          />
+          <div>
+            <h3>01</h3>
+            <strong>
+              <a class="boottom--news" href="">Reviving Retro PCs</a></strong
+            >
+            <p>
+              What happens when old PCs <br />
+              are given modern upgrades?
+            </p>
+          </div>
+        </article>
+        <article>
+          <img
+            src="./images/bitmap (1).svg"
+            alt="bitmap img"
+            width="100"
+            height="127"
+          />
+          <div>
+            <h3>02</h3>
+            <strong>
+              <a class="boottom--news" href=""
+                >Top 10 Laptops of 2022</a
+              ></strong
+            >
+            <p>
+              Our best picks for various <br />
+              needs and budgets.
+            </p>
+          </div>
+        </article>
+        <article>
+          <img
+            src="./images/bitmap (2).svg"
+            alt="bitmap img"
+            width="100"
+            height="127"
+          />
+          <div>
+            <h3>03</h3>
+            <strong
+              ><a class="boottom--news" href="">The Growth of Gaming</a></strong
+            >
+            <p>
+              How the pandemic has sparked <br />
+              fresh opportunities.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script>
+      const toggleBtn = document.querySelector(".header__toggle-btn");
+      const hiddenMenu = document.querySelector(".header__hidden");
+      const body = document.body;
+
+      toggleBtn.addEventListener("click", () => {
+        hiddenMenu.classList.toggle("show");
+        body.classList.toggle("no-scroll");
+      });
+    </script>
   </body>
 </html>
